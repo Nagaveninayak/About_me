@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  aboutme:
+    build: '.'
+    container_name: 'aboutme_c'
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./about_me/pages:/about_me/pages
+      - ./about_me/node_modules:/about_me/node_modules
