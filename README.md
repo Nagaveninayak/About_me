@@ -13,7 +13,11 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Need to do:
-Navbar
 Personal info
 Projects info
 Footer
+
+
+Added:
+Navbar
+Welcome page image
