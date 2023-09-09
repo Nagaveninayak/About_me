@@ -21,3 +21,12 @@ Footer
 Added:
 Navbar
 Welcome page image
+
+
+New Design :
+
+![Alt text](public\images\Structure.jpeg)
+
+Source : `https://wiki.hoyolab.com/pc/genshin/entry/20`
+
+[Genshin Traveler Wiki](https://wiki.hoyolab.com/pc/genshin/entry/20)
