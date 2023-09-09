@@ -25,7 +25,7 @@ Welcome page image
 
 New Design :
 
-![Alt text](public\images\Structure.jpeg)
+![Alt text](public/images/Structure.jpeg)
 
 Source : `https://wiki.hoyolab.com/pc/genshin/entry/20`
 
