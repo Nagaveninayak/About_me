@@ -24,6 +24,6 @@
 } */
 
 body {
-    color: 'black';
-    background: white;
+    color: 'white';
+    background: url('/images/mondstadt.jpg');
 }

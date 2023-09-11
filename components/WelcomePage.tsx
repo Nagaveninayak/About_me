@@ -7,7 +7,6 @@ export function WelcomePage() {
             <h2 className="text-3xl font-black mt-24 mb-10">Full Stack Developer</h2>
             <Image src={codeImage} alt='desk' className="w-1/2 h-1/2" />
             <div >
-
             </div>
         </div>
     )

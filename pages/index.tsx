@@ -1,16 +1,18 @@
-import { Navbar } from '@/components/Navbar';
-import { WelcomePage } from '@/components/WelcomePage';
+import { Overview } from '@/components/Overview/Overview';
 import React from 'react';
 
 function HomePage() {
     return (
-        <div className='mx-3.5'>
-            <Navbar />
-            <WelcomePage />
-            {/* <h1 className="text-3xl font-bold underline text-red-700">
-                Hello world!
-            </h1> */}
-        </div>
+        <>
+            <div className='flex flex-row backdrop-blur'>
+                <h1 className='text-white  basis-2/12'>Hello Left Side</h1>
+                <div className='basis-8/12 '>
+                    <Overview />
+                </div>
+                <h1 className='text-white  basis-2/12'>Hello Right Side</h1>
+            </div>
+        </>
+
     )
 }
 
