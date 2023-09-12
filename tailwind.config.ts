@@ -14,6 +14,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         'mondstadt': "url('/images/mondstadt.jpg')",
+      },
+      colors: {
+        'cardGreen': '#4f7d75',
+        'cardDarkGreen': '#236e61'
       }
     },
   },
