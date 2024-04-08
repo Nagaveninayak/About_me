@@ -16,14 +16,27 @@
     }
 }
 
-/* body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom,
-            transparent,
-            rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-} */
-
 body {
     color: 'white';
     background: url('/images/mondstadt.jpg');
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.scrollable-section {
+    overflow-y: auto; 
+    height: 100vh; 
+    background-attachment: fixed;
+    background-size: cover; 
+
+    /* Hide the scrollbar */
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+
+.fixed-nav {
+    position: fixed;
+    background: url('/images/mondstadt.jpg');
+    background-attachment: fixed;
+    background-size: cover; 
 }
