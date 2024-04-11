@@ -2,16 +2,12 @@ import { RefProps } from '@/Interface';
 import React from 'react';
 
 export function Navbar({ aboutRef, projectRef, contactRef }: RefProps) {
-    console.log("🚀 ~ Navbar ~ contactRef:", contactRef)
-    console.log("🚀 ~ Navbar ~ projectRef:", projectRef)
-    console.log("🚀 ~ Navbar ~ aboutRef:", aboutRef)
+
     const scrollToRef = (ref: React.MutableRefObject<HTMLElement | null>) => {
         if (ref.current) {
-            console.log("🚀 ~ scrollToRef ~ ref:", ref)
             ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     };
-
 
     return (
         <nav className="z-10 w-full fixed-nav">
@@ -20,9 +16,9 @@ export function Navbar({ aboutRef, projectRef, contactRef }: RefProps) {
                     Name
                 </div>
                 <div className="grid grid-cols-3 gap-x-10 text-white mr-10">
-                    <a href="#" onClick={() => scrollToRef(aboutRef)}>about</a>
-                    <a href="#" onClick={() => scrollToRef(projectRef)}>project</a>
-                    <a href="#" onClick={() => scrollToRef(contactRef)}>contact</a>
+                    <a href="#about" onClick={() => scrollToRef(aboutRef)}>about</a>
+                    <a href="#project" onClick={() => scrollToRef(projectRef)}>project</a>
+                    <a href="#contact" onClick={() => scrollToRef(contactRef)}>contact</a>
                 </div>
             </div>
             <div className=" border-b-2 border-white mt-1 "></div>
