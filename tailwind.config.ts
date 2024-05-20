@@ -17,7 +17,9 @@ module.exports = {
       },
       colors: {
         'cardGreen': '#4f7d75',
-        'cardDarkGreen': '#236e61'
+        'cardDarkGreen': '#236e61',
+        'brownHover': '#ffd97c',
+        'greenGrey': '#064d4b'
       }
     },
   },
