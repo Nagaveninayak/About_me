@@ -7,3 +7,5 @@ export const IMAGE_CONSTANTS = [
     {title: "Todo 3", imagePath: codingImage },
     {title: "Todo 4", imagePath: codingImage },
 ]
+
+export const codeImage = codingImage;
