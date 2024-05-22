@@ -20,17 +20,17 @@ body {
     color: 'white';
     background: url('/images/mondstadt.jpg');
     background-attachment: fixed;
-    background-size: cover; 
+    background-size: cover;
 }
 
 .scrollable-section {
-    overflow-y: auto; 
-    height: 100vh; 
+    overflow-y: auto;
+    height: 100vh;
     background-attachment: fixed;
-    background-size: cover; 
+    background-size: cover;
 
     /* Hide the scrollbar */
-    scrollbar-width: none; 
+    scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
@@ -38,5 +38,15 @@ body {
     position: fixed;
     background: url('/images/mondstadt.jpg');
     background-attachment: fixed;
-    background-size: cover; 
+    background-size: cover;
+}
+
+@keyframes slideRightToLeft {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
