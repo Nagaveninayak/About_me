@@ -19,7 +19,14 @@ module.exports = {
         'cardGreen': '#4f7d75',
         'cardDarkGreen': '#236e61',
         'brownHover': '#ffd97c',
-        'greenGrey': '#064d4b'
+        'greenGrey': '#064d4b',
+        'buttonInital': '#183e3f',
+        'buttonHover': '#0f1f1f',
+        'buttonHover1': '#89a7a3',
+        'goldenColor': '#CCC2BC',
+        'tableBorder': '#96aba4',
+        'tableBg': '#3c5f5b',
+        'tableText': '#c3dfd5'
       }
     },
   },

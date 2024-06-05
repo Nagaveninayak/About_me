@@ -26,9 +26,9 @@ export function Projects() {
                                     setCurrentProject(item);
                                     setCurrentImageIndex(index);
                                 }}
-                                className={`rounded-full cursor-pointer ${isSelected ? 'ring-[5px] ring-brownHover/50 ring-offset-2' : 'hover:ring-[5px] hover:ring-brownHover/50 hover:ring-offset-2'}`}
+                                className={`rounded-full cursor-pointer text-white px-5 py-3 bg-buttonInital ${isSelected ? 'bg-buttonHover text-goldenColor border-goldenColor' : 'hover:bg-buttonHover hover:text-goldenColor hover:border-goldenColor'} border-2 border-buttonInital text-bold`}
                             >
-                                <Image src={item.imagePath} alt="title" className="w-16 h-16 rounded-full" />
+                                {item.title}
                             </button>
                         })
                     }
