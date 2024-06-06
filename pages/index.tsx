@@ -8,8 +8,9 @@ function HomePage() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const skillRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {}, [aboutRef, projectRef, contactRef]);
+  useEffect(() => {}, [aboutRef, projectRef, contactRef, skillRef]);
 
   return (
     <>
@@ -17,6 +18,7 @@ function HomePage() {
         aboutRef={aboutRef}
         projectRef={projectRef}
         contactRef={contactRef}
+        skillRef={skillRef}
       />
       <div className="flex flex-row backdrop-blur-[5px] mb-5">
         <nav className="text-white  basis-2/12 text-center"> Left Side</nav>
@@ -25,15 +27,9 @@ function HomePage() {
             aboutRef={aboutRef}
             projectRef={projectRef}
             contactRef={contactRef}
+            skillRef={skillRef}
           />
         </section>
-        {/* <nav className="text-white  basis-2/12 text-center fixed-nav">
-          <ScrollTracker
-            aboutRef={aboutRef}
-            projectRef={projectRef}
-            contactRef={contactRef}
-          />
-        </nav> */}
       </div>
       <Footer />
     </>

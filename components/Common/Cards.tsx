@@ -7,23 +7,26 @@ import { BashCard } from "./bashCard";
 //TODO: or make like this https://in.pinterest.com/pin/1970393579758271/
 interface ICards {
   projectInfo: {
-    title: string,
-    description: string,
-    projectLink: string,
+    title: string;
+    description: string;
+    projectLink: string;
     tools: {
-      mainTitle: string,
-      description: string
-    }[]
-  }
+      mainTitle: string;
+      description: string;
+    }[];
+  };
 }
-
 
 export function Cards({ projectInfo }: ICards) {
   return (
-    <div className=" my-5 p-5 rounded-lg border-2 py-1 border-transparent ">
+    <div className=" my-5 rounded-lg border-2 py-1 border-transparent ">
       <section className="flex flex-row justify-between gap-x-4">
         <div className="basis-2/4">
-          <FancyButton title={projectInfo.title} description={projectInfo.description} buttonLink={projectInfo.projectLink} />
+          <FancyButton
+            title={projectInfo.title}
+            description={projectInfo.description}
+            buttonLink={projectInfo.projectLink}
+          />
         </div>
         <div className="basis-2/4">
           <BashCard title="Todo List" tools={projectInfo.tools} />

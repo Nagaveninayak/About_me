@@ -6,20 +6,21 @@ import { Skills } from "./Skills";
 import { Resume } from "./Resume";
 import { RefProps } from "@/Interface";
 
-export function Overview({ aboutRef, projectRef, contactRef }: any) {         
+export function Overview({ aboutRef, projectRef, contactRef, skillRef }: any) {
   return (
     <div className="flex flex-col mt-24">
+      <Introduction />
       <div ref={aboutRef}>
-        <Introduction />
+        <Education />
       </div>
-      <Education />
       <div ref={projectRef}>
         <Projects />
       </div>
-      <Skills />
-      <Resume />
+      <div ref={skillRef}>
+        <Skills />
+      </div>
       <div ref={contactRef}>
-        <Education />
+        <Resume />
       </div>
     </div>
   );
