@@ -7,9 +7,15 @@ export function Navbar({
   contactRef,
   skillRef,
 }: RefProps) {
+  console.log(aboutRef);
   const scrollToRef = (ref: React.MutableRefObject<HTMLElement | null>) => {
     if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      const offsetTop =
+        ref.current.getBoundingClientRect().top + window.pageYOffset - 50;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -28,7 +34,7 @@ export function Navbar({
             skills
           </a>
           <a href="#contact" onClick={() => scrollToRef(contactRef)}>
-            contact
+            resume
           </a>
         </div>
       </div>
