@@ -12,7 +12,7 @@ export function Education() {
   };
 
   return (
-    <div className=" bg-gradient-to-r from-cardGreen to-cardDarkGreen my-5 p-5 rounded-lg">
+    <div className=" bg-gradient-to-r from-cardGreen/95 to-cardDarkGreen/95 my-5 p-5 rounded-lg backdrop-blur-[5px]">
       <header>
         <h1 className="text-white font-extrabold text-2xl border-solid border-b-2 py-1 border-white">
           About Me
@@ -24,11 +24,10 @@ export function Education() {
           return (
             <button
               onClick={() => handleButtonClick(title)}
-              className={`rounded-full cursor-pointer text-white px-5 py-2 bg-buttonInital ${
-                isActive
-                  ? "bg-buttonHover text-goldenColor border-goldenColor"
-                  : "hover:bg-buttonHover hover:text-goldenColor hover:border-goldenColor"
-              } border-2 border-buttonInital text-bold`}
+              className={`rounded-full cursor-pointer text-white px-5 py-2 bg-buttonInital ${isActive
+                ? "bg-buttonHover text-goldenColor border-goldenColor"
+                : "hover:bg-buttonHover hover:text-goldenColor hover:border-goldenColor"
+                } border-2 border-buttonInital text-bold`}
               key={index}
             >
               {title}
