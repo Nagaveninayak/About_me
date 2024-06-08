@@ -4,28 +4,9 @@ import Image from "next/image";
 export function Resume() {
   const { name, job, contact, skills, about, work, education, hobbies } =
     RESUME;
-  // const header = (
-  //     <div className="pretty-header-container text-center mt-6">
-  //         <h1 className="pretty-header text-3xl font-bold">
-  //             <Link to="/Resume">Resume</Link>
-  //         </h1>
-  //     </div>
-  // );
-
-  // const prettyButton = print ? null : (
-  //     <button className="prettyButton mt-24">
-  //         <Link to="#HireMe" className="animate-pulse" smooth>
-  //             Hire Me <i className="arrow down"></i>
-  //         </Link>
-  //     </button>
-  // );
-
-  // const containerStyles = print ? {
-  //     marginTop: '0px',
-  // } : {};
 
   return (
-    <div className=" bg-gradient-to-r from-cardGreen to-cardDarkGreen my-5 p-5 rounded-lg">
+    <div className=" bg-gradient-to-r from-cardGreen/95 to-cardDarkGreen/95 my-5 p-5 rounded-lg backdrop-blur-[5px]">
       <h1 className="text-white font-extrabold text-2xl border-solid border-b-2 py-1 border-white">
         Resume
       </h1>

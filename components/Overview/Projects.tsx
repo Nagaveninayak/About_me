@@ -13,7 +13,7 @@ export function Projects() {
   // }, [currentProject]); // Dependency array includes currentProject
 
   return (
-    <div className="bg-gradient-to-r from-cardGreen to-cardDarkGreen my-5 p-5 rounded-lg">
+    <div className="bg-gradient-to-r from-cardGreen/95 to-cardDarkGreen/95 my-5 p-5 rounded-lg backdrop-blur-[5px]">
       <h1 className="text-white font-extrabold text-2xl border-solid border-b-2 py-1 border-white">
         Projects / Gallery
       </h1>
@@ -28,11 +28,10 @@ export function Projects() {
                   setCurrentProject(item);
                   setCurrentImageIndex(index);
                 }}
-                className={`rounded-full cursor-pointer text-white px-5 py-2 bg-buttonInital ${
-                  isSelected
-                    ? "bg-buttonHover text-goldenColor border-goldenColor"
-                    : "hover:bg-buttonHover hover:text-goldenColor hover:border-goldenColor"
-                } border-2 border-buttonInital text-bold`}
+                className={`rounded-full cursor-pointer text-white px-5 py-2 bg-buttonInital ${isSelected
+                  ? "bg-buttonHover text-goldenColor border-goldenColor"
+                  : "hover:bg-buttonHover hover:text-goldenColor hover:border-goldenColor"
+                  } border-2 border-buttonInital text-bold`}
               >
                 {item.title}
               </button>
