@@ -5,14 +5,19 @@ import { useState } from "react";
 export function Education() {
   const [activeNav, setActiveNav] = useState(ABOUT[0]);
   const [currentNav, setCurrentNav] = useState<any>(ATTRIBUTES);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleButtonClick = (title: string) => {
+    setIsAnimating(true);
     setActiveNav(title);
     setCurrentNav(ABOUT_MAP[title as keyof typeof ABOUT_MAP]);
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 500); // Duration of the animation
   };
 
   return (
-    <div className=" bg-gradient-to-r from-cardGreen/95 to-cardDarkGreen/95 my-5 p-5 rounded-lg backdrop-blur-[5px]">
+    <div className=" bg-gradient-to-r from-cardGreen/95 to-cardDarkGreen/95 my-5 p-5 rounded-lg backdrop-blur-[5px] relative">
       <header>
         <h1 className="text-white font-extrabold text-2xl border-solid border-b-2 py-1 border-white">
           About Me
@@ -24,10 +29,11 @@ export function Education() {
           return (
             <button
               onClick={() => handleButtonClick(title)}
-              className={`rounded-full cursor-pointer text-white px-5 py-2 bg-buttonInital ${isActive
-                ? "bg-buttonHover text-goldenColor border-goldenColor"
-                : "hover:bg-buttonHover hover:text-goldenColor hover:border-goldenColor"
-                } border-2 border-buttonInital text-bold`}
+              className={`rounded-full cursor-pointer text-white px-5 py-2 bg-buttonInital ${
+                isActive
+                  ? "bg-buttonHover text-goldenColor border-goldenColor"
+                  : "hover:bg-buttonHover hover:text-goldenColor hover:border-goldenColor"
+              } border-2 border-buttonInital text-bold`}
               key={index}
             >
               {title}
@@ -35,7 +41,9 @@ export function Education() {
           );
         })}
       </nav>
-      <section className="mt-10">
+      <section
+        className={`mt-10 ${isAnimating ? "content-enter relative" : ""}`}
+      >
         {currentNav === ATTRIBUTES && (
           <div className="grid grid-cols-2 gap-5">
             <section className="">
