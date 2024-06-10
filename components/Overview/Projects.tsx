@@ -6,14 +6,19 @@ import { PROJECT_INFORMATION } from "@/constants/ProjectConstants";
 export function Projects() {
   const [currentProject, setCurrentProject] = useState(PROJECT_INFORMATION[0]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [animationKey, setAnimationKey] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  // useEffect(() => {
-  //     setAnimationKey(prevKey => prevKey + 1); // Increment key to trigger re-render
-  // }, [currentProject]); // Dependency array includes currentProject
+  const handleButtonClick = (item: any, index: number) => {
+    setIsAnimating(true);
+    setCurrentProject(item);
+    setCurrentImageIndex(index);
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 500); // Duration of the animation
+  };
 
   return (
-    <div className="bg-gradient-to-r from-cardGreen/95 to-cardDarkGreen/95 my-5 p-5 rounded-lg backdrop-blur-[5px]">
+    <div className="bg-gradient-to-r from-cardGreen/95 to-cardDarkGreen/95 my-5 p-5 rounded-lg backdrop-blur-[5px] relative h-full">
       <h1 className="text-white font-extrabold text-2xl border-solid border-b-2 py-1 border-white">
         Projects / Gallery
       </h1>
@@ -24,24 +29,21 @@ export function Projects() {
             return (
               <button
                 key={index}
-                onClick={() => {
-                  setCurrentProject(item);
-                  setCurrentImageIndex(index);
-                }}
-                className={`rounded-full cursor-pointer text-white px-5 py-2 bg-buttonInital ${isSelected
-                  ? "bg-buttonHover text-goldenColor border-goldenColor"
-                  : "hover:bg-buttonHover hover:text-goldenColor hover:border-goldenColor"
-                  } border-2 border-buttonInital text-bold`}
+                onClick={() => handleButtonClick(item, index)}
+                className={`rounded-full cursor-pointer text-white px-5 py-2 bg-buttonInital ${
+                  isSelected
+                    ? "bg-buttonHover text-goldenColor border-goldenColor"
+                    : "hover:bg-buttonHover hover:text-goldenColor hover:border-goldenColor"
+                } border-2 border-buttonInital text-bold`}
               >
                 {item.title}
               </button>
             );
           })}
         </nav>
-        {/* <div key={animationKey} className="animate-[slideRightToLeft_1s_ease-in-out_forwards]">
-                    <Cards projectInfo={currentProject.project} />
-                </div> */}
-        <Cards projectInfo={currentProject.project} />
+        <div className={`${isAnimating ? "content-enter " : ""}`}>
+          <Cards projectInfo={currentProject.project} />
+        </div>
       </section>
     </div>
   );
