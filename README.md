@@ -12,8 +12,5 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-
-Source : `https://wiki.hoyolab.com/pc/genshin/entry/20`
-
-[Genshin Traveler Wiki](https://wiki.hoyolab.com/pc/genshin/entry/20)
+Change in `Constants` file to change any values that are displayed in the cards
 
